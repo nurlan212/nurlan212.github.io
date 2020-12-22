@@ -1,0 +1,30 @@
+-
+ let services = [{
+   class: 'people',
+   title: 'Transparent pricing',
+   text: 'See fixed prices before you book. No hidden charges.'
+ },
+ {
+   class: 'people-2',
+   title: 'Experts only',
+   text: 'Our professionals are well trained and have on-job expertise.'
+ },
+ {
+   class: 'speaker',
+   title: 'Fully equipped',
+   text: 'We bring everything needed to get the job done well.'
+ }]
+.services
+  .container.services-container
+    .services-content1
+      h4.services-content1__title Why HOUSESALE Company?
+      ul.services-content1__list
+        each item in services
+          li.services-content1__list__item(class=`${item.class}`)
+            .services-content1__list__item-inner
+              h6.services-content1__list__item__title= item.title
+              p.services-content1__list__item__text= item.text
+    .services-content2
+      .services-content2__colored-block
+      .services-content2__content
+        img.services-content2__content__img(src="uploads/img-2.jpg", alt="")

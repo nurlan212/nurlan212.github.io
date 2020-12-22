@@ -1,0 +1,25 @@
+-
+ let cards = [{
+   image: 'house1.jpg',
+   text: 'Same great quality. New lower prices'
+ },
+ {
+   image: 'house2.jpg',
+   text: 'Everyday Essentials, High quality affordable'
+ },
+ {
+   image: 'house3.jpg',
+   text: 'Join the makeover journey'
+ }];
+
+.advantages
+  .container.advantages-container
+    .advantages__cards
+      each item in cards
+        a.advantages__cards__item-link(href="#")
+          .advantages__cards__item
+            .advantages__cards__item__image-wrapper
+              img.advantages__cards__item__image-wrapper__img(src=`uploads/${item.image}`, alt="")
+            .advantages__cards__item__under
+              p.advantages__cards__item__under__text= item.text
+    a.advantages__link(href="#") Read more

@@ -1,0 +1,29 @@
+- 
+  let cards = {
+    cafe: {
+      title: 'Nguồn gốc',
+      text: 'Những hạt cà phê Arabica, Robusta đạt chất lượng theo tiêu chuẩn quốc tế.'
+    },
+    coffee: {
+      title: 'Chất lượng',
+      text: 'Từng một hạt cà phê là cả một quá trình tập trung cao độ của nghệ nhân cà phê.'
+    },
+    glass: {
+      title: 'Các loại hạt',
+      text: '70% chất lượng tách cà phê đến từ nguồn gốc và chất lượng green bean.'
+    },
+    machine: {
+      title: 'Pha chế',
+      text: 'Những hạt cà phê được lột xác qua quá trình rang xay kỹ lưỡng và nghiêm ngặt.'
+    }     
+  }
+.advantages
+  .container.advantages-container
+    .advantages__title-block
+      h6.advantages__title-block__subtitle.subtitle Your Personalized Coffee
+      h5.advantages__title-block__title.title COFFEE BUILD YOUR BASE
+    .advantages__cards
+      each value,key in cards
+        ul.advantages__cards__item(class=`ic-${key}`)
+          h5.advantages__cards__item__title= value.title
+          p.advantages__cards__item__text= value.text

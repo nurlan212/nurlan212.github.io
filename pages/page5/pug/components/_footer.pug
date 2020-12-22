@@ -1,0 +1,35 @@
+- let footerMenu = ['Delivery Service', 'Assembly Service', 'Customer Service', 'Contact Us', 'Near Me', 'Careers', 'Gift Cards', 'Gift Cards'];
+
+- 
+  let cities = {
+    Australia: ['Sydney', 'Albury', 'Queensland', 'Adelaide', 'Hobart', 'Darwin', 'Canberra', 'Perth', 'Melbourne'],
+    UAE: ['Dubai', 'Abu Dhabi', 'Sharjah', 'Ajman', 'Al Ain'],
+    USA: ['New York', 'Los Angeles', 'Chicago', 'Houston', 'Philadelphia', 'San Diego', 'Washington', 'Boston', 'Oklahoma City', 'Las Vegas'],
+    Maxico: ['Mexico City', 'Ecatepec', 'Guadalajara', 'Puebla City', 'Ciudad Juárez']
+  };
+  let countries = Object.keys(cities);
+
+footer.footer
+  .container.footer-container
+    nav.footer__menu
+      each menuItems in footerMenu
+        a.footer__menu__link(href="#")= menuItems
+    .footer__content
+      h5.footer__content__title Serving in
+      ul.footer__content__countries
+        - for(let i = 0; i < countries.length; i++)
+            li.footer__content__countries__country= countries[i]
+              ul.footer__content__countries__country__cities
+                each city in cities[countries[i]]
+                  li.footer__content__countries__country__cities__city
+                    a.footer__content__countries__country__cities__city__link(href="#")= city
+    .footer__under
+      a.footer__under__logo(href="#")
+        img(src="img/logo.svg", alt="logo")
+      p.footer__under__text © 2020 Housesale Technologies Ltd.
+      p.footer__under__text 1760  Dancing Dove Lane, New York, USA
+      a.footer__under__email(href="mailto:sales@housesales.com") sales@housesales.com
+      a.footer__under__link(href="#")
+        img(src="img/google-play.png", alt="google play")
+      a.footer__under__link(href="#")
+        img(src="img/app-store.png", alt="app store")

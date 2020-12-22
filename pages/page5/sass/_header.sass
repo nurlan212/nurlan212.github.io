@@ -1,0 +1,103 @@
+.header
+  background: url(../img/house.jpg) 50% 50% no-repeat
+  background-size: cover
+  &-container
+    padding-top: 42px
+    padding-bottom: 73px
+    color: #fff
+
+.header__nav
+  display: flex
+  justify-content: space-between
+  align-items: center
+  &__menu
+    display: flex    
+    &__item
+      font-size: 18px
+      font-family: 'Roboto', sans-serif
+      color: inherit
+      margin-right: 42px
+      &:last-child
+        margin-right: 0
+      &:hover
+        color: $accent-color
+
+.header__content
+  max-width: 789px
+  margin-top: 158px
+  color: white
+  &__title
+    font-size: 60px
+    font-weight: 700
+    line-height: 81px
+  &__text
+    font-size: 29px
+    line-height: 39px
+
+.header__search
+  margin-top: 153px
+  &__inputs
+    padding: 20px 92px
+    display: flex
+    background: #fff
+    &__input
+      margin-right: 23px
+      width: 787px
+      height: 61px
+      border: none
+      background-color: #FFF0CB
+      font-size: 23px
+      padding-left: 20px
+      &:focus
+        @extend %inputFocus
+    &__button
+      @extend %button-style
+      font-family: 'Roboto', sans-serif
+      font-size: 23px
+      width: 247px
+      &:focus
+        @extend %inputFocus
+      &:hover
+        @extend %buttonHover
+
++media-screen(768px)
+  .header__nav__menu
+    display: none
+  .header__search__inputs
+    padding: 20px
+
++media-screen(600px)
+  .header-container
+    padding-bottom: 50px
+  .header__content
+    margin-top: 100px
+    &__title
+      font-size: 38px
+      line-height: 47px
+    &__text
+      font-size: 25px
+      line-height: 28px
+  .header__search
+    margin-top: 90px
+    &__inputs
+      padding: 10px
+      &__input
+        margin-right: 10px
+        padding-left: 0
+      
++media-screen(480px)
+  .header__search__inputs
+    display: grid
+    grid-template-columns: 70% 28%
+    column-gap: 2%
+    &__input
+      width: auto
+      margin-right: 0
+    &__button
+      width: auto
+      font-size: 21px
+
+
+
+
+

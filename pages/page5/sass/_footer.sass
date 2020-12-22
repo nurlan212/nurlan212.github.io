@@ -1,0 +1,77 @@
+.footer
+  background: $footer-bg-color
+  font-family: 'Roboto', sans-serif
+  &-container
+    padding-top: 37px
+    padding-bottom: 37px
+  &__menu
+    padding-bottom: 31px
+    display: flex
+    justify-content: space-between
+    &__link      
+      font-size: 16px
+      line-height: 19px
+      color: #CACACA
+      &:hover
+        @extend %footer-hover-effect
+  &__content
+    padding-top: 28px
+    padding-bottom: 28px
+    border-top: 1px solid  rgba(255, 255, 255, 0.16)
+    border-bottom: 1px solid  rgba(255, 255, 255, 0.16)
+    &__title
+      font-weight: 600
+      font-size: 24px
+      line-height: 33px
+      color: #FFFFFF
+
+.footer__content__countries
+  margin-top: 30px
+  &__country
+    margin-bottom: 36px
+    font-size: 20px
+    line-height: 23px
+    color: #E6E5E5
+    &:last-child
+      margin-bottom: 0
+    &__cities
+      margin-top: 11px
+      display: flex
+      flex-wrap: wrap
+      &__city        
+        margin-right: 30px
+        &:last-child
+          margin-right: 0
+        &__link
+          font-size: 16px
+          line-height: 19px
+          color: #CACACA
+          &:hover
+            @extend %footer-hover-effect
+
+.footer__under
+  padding-top: 39px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  color: #CACACA
+  font-size: 11px
+  &__email
+    color: inherit
+    &:hover
+      @extend %footer-hover-effect
+
++media-screen(1024px)
+  .footer__under
+    flex-direction: column
+    &__text, &__email
+      margin: 10px 0
+    &__link
+      margin-top: 10px
+
++media-screen(870px)
+  .footer__menu
+    flex-direction: column
+    align-items: center
+    &__link
+      padding: 15px

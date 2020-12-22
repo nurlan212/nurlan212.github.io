@@ -1,0 +1,69 @@
+.advantages
+  background: #fff
+  &-container
+    padding-top: 74px
+    padding-bottom: 99px
+  &__link
+    @extend %readMoreStyle
+
+.advantages__cards
+  display: grid
+  grid-template-columns: repeat(auto-fill, minmax(380px, 399px))
+  column-gap: 20px
+  row-gap: 30px
+  &__item
+    display: flex
+    flex-direction: column
+    box-shadow: 0 10px 20px 0 #F7F2E8
+    &__image-wrapper
+      height: 414px
+      overflow: hidden
+      &__img
+        width: 100%
+        height: auto
+    &__under
+      padding: 47px 10px 47px 25px
+      display: flex
+      align-items: center
+      color: #000
+      &::before
+        display: inline-block
+        width: 38px
+        height: 38px
+        content: ""
+        border-radius: 50%
+        background: $accent-color url(../img/ic-arrow.svg) 50% 50% no-repeat
+        box-shadow: 0 3px 5px 2px rgba(0,0,0,0.1)
+      &__text
+        margin-left: 27px
+        font:
+          size: 14px
+          weight: 700
+        line-height: 19px
+
+.advantages__cards__item:hover
+  box-shadow: 0 10px 20px 10px #F7F2E8
+.advantages__cards__item:hover .advantages__cards__item__under
+  background: $accent-color
+.advantages__cards__item:hover .advantages__cards__item__under::before
+  background-color: #fff
+
++media-screen(480px)
+  .advantages
+    &-container
+      display: flex
+      flex-direction: column
+      align-items: center
+      padding-bottom: 60px
+    &__link
+      display: inline-block
+  .advantages__cards
+    display: flex
+    justify-content: center
+    &__item-link:nth-child(2), &__item-link:nth-child(3)       
+      display: none
+    &__item__under
+      background: $accent-color
+      &::before
+        background-color: #fff
+      

@@ -1,0 +1,47 @@
+.article
+  &-container
+    padding-top: 49px
+    padding-bottom: 60px
+    display: grid
+    grid-template-columns: minmax(300px, 637px) 570px
+    column-gap: 40px
+    row-gap: 30px
+    grid-row: max-content
+    font-weight: 600
+
+.article__clouds
+  padding-top: 138px
+  &-wrapper
+    display: flex
+    flex-wrap: wrap
+  &__link
+    margin-right: 8px
+    font-size: 20px
+    line-height: 27px
+    color: #000
+    &:hover
+      color: $accent-color
+    &::after
+      margin-left: 8px
+      content: "|"
+    &:last-child::after
+      content: none
+        
+.article__content  
+  &__title
+    font-size: 36px
+    line-height: 49px
+    color: $dark-color
+  &__subtitle
+    margin-top: 33px
+    font-size: 24px
+    @extend %articleContentStyle
+  &__text
+    font-size: 23px
+    @extend %articleContentStyle
+
++media-screen(945px)
+  .article-container
+    grid-template-columns: auto
+  .article__clouds
+    padding-top: 0

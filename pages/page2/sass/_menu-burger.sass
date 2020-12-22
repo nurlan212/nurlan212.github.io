@@ -1,0 +1,32 @@
+.menu-burger 
+  position: fixed
+  top: 100px
+  right: 0
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  width: 80px
+  height: 80px
+  background-color: $primary-color
+  transform: rotate(-45deg) translateX(71%)
+  cursor: pointer
+  z-index: 1000
+  &-inner
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    height: 40px
+    width: 40px
+    transform: rotate(45deg) translate(-10px)
+  &__line
+    display: inline-block
+    height: 4px
+    width: 100%
+    border-radius: 5px
+    background: $light-gray
+    margin-bottom: 9px    
+    &:last-child
+      margin-bottom: 0 
+

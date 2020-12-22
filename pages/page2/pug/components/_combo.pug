@@ -1,0 +1,35 @@
+-
+  let comboCards = {
+    brown: {
+      price: ['147.000', '155.000'],
+      title: 'Combo Revo Đậm Đà',
+      text: 'Hàm lượng caffein trong Revo Đậm Đà đủ mạnh để làm bạn tỉnh táo làm việc...'
+    },
+    blue: {
+      price: ['156.000', '165.000'],
+      title: 'Combo Revo Everyday',
+      text: 'Revo Everyday được phối trộn giữa vị đắng của hạt Robusta và hương thơm...'
+    },
+    red: {
+      price: ['275.000', '260.000'],
+      title: 'Combo Revo Honey',
+      text: 'Honey – trong tên gọi Revo Honey đến từ phương pháp chế biến hạt Arabica...'
+    }
+  }
+.combo
+  .container.combo-container
+    .combo__title-block
+      h6.combo__title-block__subtitle.subtitle Your Personalized Coffee
+      h5.combo__title-block__title.title COMBO PHIN PHÊ
+    .combo__cards
+      each value,key in comboCards
+        .combo__cards__item(class=`cup-${key}`)
+          .combo__cards__item-inner
+            .combo__cards__item__prices
+              p.combo__cards__item__prices__current= value.price[0]
+              p.combo__cards__item__prices__old= value.price[1]
+            h5.combo__cards__item__title= value.title
+            p.combo__cards__item__text= value.text
+            .combo__cards__item__buttons
+              a.combo__cards__item__buttons__btn(href="#") MUA NGAY
+              a.combo__cards__item__buttons__btn(href="#") CHI TIẾT

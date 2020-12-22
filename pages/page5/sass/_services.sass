@@ -1,0 +1,90 @@
+.services-container
+  padding-bottom: 98px
+  display: flex
+  justify-content: space-between
+
+.services-content1
+  &__title
+    font-weight: 600
+    font-size: 36px
+    line-height: 49px
+    color: $dark-color
+  &__list
+    margin-top: 78px
+    display: flex
+    flex-direction: column
+    &__item
+      margin-bottom: 45px
+      color: $basic-color
+      display: flex
+      align-items: center
+      &__title
+        font-size: 29px
+      &__text
+        margin-top: 14px
+        font-size: 21px
+      &::before
+        content: ""
+        display: inline-block
+        width: 92px
+        height: 92px
+        border-radius: 50%
+        background: 50% 50% no-repeat
+        margin-right: 29px
+
+@each $item in people, people-2, speaker
+  .#{$item}::before
+    background-image: url(../img/#{$item}.png)
+
+.services-content2  
+  display: flex
+  align-items: center
+  &__colored-block
+    width: 74px
+    height: 477px
+    background: $accent-color
+  &__content
+    width: 425px
+    overflow: hidden
+    &__img
+      width: 100%
+      height: auto
+
++media-screen(1165px)
+  .services-content2__content
+    width: 330px
+  .services-content2__colored-block
+    width: 50px
+    height: 315px
+
++media-screen(1000px)
+  .services-content2__content
+    width: 265px
+  .services-content2__colored-block
+    width: 30px
+    height: 280px
+
++media-screen(900px)
+  .services-content2__content
+    width: 200px
+  .services-content2__colored-block
+    width: 20px
+    height: 209px
+
++media-screen(768px)
+  .services-content2
+    display: none
+
++media-screen(600px)
+  .services-content1__list__item
+    flex-direction: column
+    align-items: flex-start
+
++media-screen(480px)
+  .services-container
+    padding-bottom: 30px
+
+
+
+      
+  

@@ -1,0 +1,38 @@
+.promo
+  background: url(../img/building.jpg) 50% 50% no-repeat
+  background-size: cover
+
+.promo-container
+  padding-top: 41px
+  padding-bottom: 71px
+  @extend %display-flex_column-align-center  
+  justify-content: space-between
+  color: #fff
+
+.promo__content
+  text-align: center
+  margin: 318px 0 221px 0
+  +media-screen(480px)
+    margin: 100px 0 90px 0
+  &__title
+    font:
+      family: 'Bebas Neue', sans-serif
+      size: 60px
+    letter-spacing: 6px
+    line-height: 1.1
+    text-transform: uppercase
+  &__text
+    margin-top: 21px
+    font:
+      size: 16px
+      weight: 600
+
+.promo__scroll
+  font:
+    size: 11px
+    weight: 600
+  color: inherit
+  letter-spacing: 4px
+  text-transform: uppercase
+  &:hover
+    color: lighten($project-btn-color, 10%)

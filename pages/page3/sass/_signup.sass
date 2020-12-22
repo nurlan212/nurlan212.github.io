@@ -1,0 +1,55 @@
+.signup
+  background-color: #171819
+  &-container
+    padding-top: 30px
+    padding-bottom: 30px
+  &-inner
+    display: flex
+    justify-content: center
+    align-items: center
+  &__title
+    font:
+      size: 22px
+      weight: 700
+    color: #fff
+    letter-spacing: 1px
+
+.signup__inputs
+  margin-left: 70px
+  display: flex
+  &__email
+    width: 250px
+    height: 40px
+    padding-left: 16px
+    font-size: 14px
+    border: none    
+    &:focus
+      outline: none
+    &::placeholder
+      font-size: 14px
+  &__btn
+    @extend %project-btn
+    border: none
+    cursor: pointer
+    padding: 0
+    &:focus
+      outline: none
+    &:hover
+      @extend %project-btn-hover
+    &:active
+      @extend %project-btn-active
+
++media-screen(630px)
+  .signup-inner
+    flex-direction: column
+  .signup__inputs
+    margin-left: 0
+    margin-top: 15px
+
++media-screen(430px)
+  .signup__inputs__email
+    width: 190px
+  .signup__inputs__btn
+    width: 100px
+  
+

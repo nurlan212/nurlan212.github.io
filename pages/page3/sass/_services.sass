@@ -1,0 +1,74 @@
+.services-container
+  padding-top: 60px
+  padding-bottom: 115px
+
+.services__content-1
+  @extend %display-flex_space-between
+
+.services__content-1__title
+  display: flex
+  flex-direction: column
+  &__text
+    @extend %block-title
+  &__line
+    @extend %block-title-line
+
+.services__content-1__inner
+  @extend %display-flex_space-between  
+  &__text
+    max-width: 405px
+    font-size: 11px
+    line-height: 19px
+  &__btn
+    margin-left: 31px
+    @extend %project-btn
+    &:hover
+      @extend %project-btn-hover
+    &:active
+      @extend %project-btn-active    
+
+.services__content-2
+  margin-top: 78px
+  display: grid
+  grid-template-columns: repeat( auto-fill, minmax(230px, 295px))
+  column-gap: 2%
+  row-gap: 10px
+  &__item
+    max-width: 295px
+    padding: 38px 23px
+    border: 1px solid #E6E6E6
+    &__title
+      font:
+        size: 16px
+        weight: 700
+      line-height: 24px
+      text-transform: uppercase
+    &__text
+      margin-top: 13px
+    &::before
+      display: inline-block
+      width: 66px
+      height: 75px
+      margin-bottom: 25px
+      content: ""
+      background: 50% 50% no-repeat
+
+@each $icon in pencil, house, factory
+  .ic-#{$icon}::before
+    background-image: url(../img/ic-#{$icon}.png)
+
++media-screen(768px)
+  .services__content-1
+    flex-wrap: wrap
+  .services__content-1__inner
+    margin-top: 20px
+
++media-screen(625px)
+  .services__content-1__inner
+    flex-direction: column
+    &__btn
+      margin-left: 0
+      margin-top: 15px
+
+   
+  

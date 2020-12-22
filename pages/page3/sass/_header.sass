@@ -1,0 +1,31 @@
+.header
+  position: -webkit-sticky
+  position: sticky
+  top: 0
+  border-bottom: 1px solid #E6E6E6
+  background-color: #fff
+  &-container
+    padding-top: 24px
+    padding-bottom: 24px    
+  &-inner
+    display: flex
+    justify-content: space-between
+
+.header__menu
+  display: flex
+  align-items: center
+  &__item
+    color: inherit
+    font:
+      size: 12px
+      weight: 600
+    text-transform: uppercase
+    margin-right: 40px
+    letter-spacing: 1px
+    &:last-child
+      margin-right: 0
+    &:hover
+      color: #00A4E5
+  +media-screen(768px)
+    display: none
+  

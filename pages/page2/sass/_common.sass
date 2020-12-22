@@ -1,0 +1,115 @@
+* 
+  box-sizing: border-box
+  padding: 0
+  margin: 0
+
+a 
+  text-decoration: none
+
+ul
+  list-style: none
+
+$bg-color: #F9FBFF
+$menu-text-color: #EDF0F5
+$title-color: #415167
+$primary-color: #415167
+$accent-color: #C7A17A
+$accent-color-2: #F9F5E8
+$dark-gray: #151D28
+$light-gray: #EDF0F5
+
+%displayLarge
+  font-family: 'Montserrat', sans-serif
+  font-size: 54px
+  font-weight: 900
+  line-height: 70px
+
+%displayMedium
+  font-family: 'Montserrat', sans-serif
+  font-size: 30px
+  font-weight: 900
+  line-height: 34px
+
+%title
+  font:
+    family: 'Nunito', sans-serif
+    size: 24px
+    weight: 700
+  line-height: 28px
+
+%subtitle
+  font:
+    family: 'Nunito', sans-serif
+    size: 20px
+    weight: 600
+  line-height: 24px
+
+%priceProduct
+  font:
+    family: 'Nunito', sans-serif
+    size: 20px
+    weight: 600
+  line-height: 24px
+
+%body
+  font:
+    family: 'Nunito', sans-serif
+    size: 16px
+    weight: 400
+  line-height: 20px
+
+%discription
+  font:
+    family: 'Nunito', sans-serif
+    size: 16px
+    weight: 300
+    style: italic
+  line-height: 20px
+
+%discription-2
+  font:
+    family: 'Nunito', sans-serif
+    size: 16px
+    weight: 300
+  line-height: 22px
+
+%button-text-style
+  font:
+    family: 'Nunito', sans-serif
+    size: 16px
+    weight: 700
+  line-height: 20px
+
+%displey-flex-column-center
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+
+%button
+  @extend %button-text-style
+  display: inline-block
+  width: 166px
+  padding: 9px 0
+  text-align: center
+  color: $primary-color
+  border-radius: 19px
+
+%buttonHover
+  background: $accent-color
+  color: $bg-color
+
+%tabHover
+  background-color: #fff
+  color: $primary-color
+  border-top-color: #EDF0F5
+
+.subtitle
+  @extend %subtitle
+  color: $title-color
+  text-align: center
+
+.title
+  @extend %displayMedium
+  color: $title-color
+  text-align: center

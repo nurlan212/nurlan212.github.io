@@ -1,0 +1,36 @@
+.advantages-container
+  padding-top: 87px
+  padding-bottom: 87px
+  @extend %displey-flex-column-center
+
+.advantages__cards
+  display: flex
+  margin-top: 72px
+  &__item
+    max-width: 226px
+    @extend %displey-flex-column-center    
+    &__title
+      @extend %title
+    &__text
+      margin-top: 12px
+      @extend %discription-2
+      text-align: center
+    &::before
+      display: inline-block
+      width: 80px
+      height: 80px
+      content: ""
+      background: 50% 50% no-repeat
+      margin-bottom: 42px
+
+@each $item in cafe, coffee, glass, machine
+  .ic-#{$item}::before
+    background-image: url(../img/ic-#{$item}.svg)
+
++media-screen(768px)
+  .advantages__cards
+    width: 100%
+    display: grid
+    grid-template-columns: repeat(auto-fill, minmax(226px, 226px))
+    column-gap: 10px
+    row-gap: 30px

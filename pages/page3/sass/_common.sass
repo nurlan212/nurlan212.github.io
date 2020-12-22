@@ -1,0 +1,48 @@
+
+$project-btn-color: #00A4E5
+$project-gray: #48555B
+
+a
+  text-decoration: none
+
+%block-title
+  font:
+    size: 18px
+    weight: 700
+  letter-spacing: 2px
+  text-transform: uppercase
+
+%block-title-line
+  width: 50px
+  margin-top: 10px
+  border:1px solid #00A4E5
+
+%display-flex_space-between
+  display: flex
+  justify-content: space-between
+
+%display-flex_column-align-center
+  display: flex
+  flex-direction: column
+  align-items: center
+
+%project-btn
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 150px
+  height: 40px
+  font-size: 13px
+  font-weight: 700
+  color: #fff
+  text-transform: uppercase
+  background-color: $project-btn-color
+
+%project-btn-hover
+  background-color: darken($project-btn-color, 5%)
+
+%project-btn-active
+  box-shadow: 1px 1px 3px 3px darken($project-btn-color, 10%) inset
+
+
+  

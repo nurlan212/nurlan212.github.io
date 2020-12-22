@@ -1,0 +1,21 @@
+.promo-footer
+  height: 499px
+  background: url(../img/city.jpg) 50% 50% no-repeat
+  background-size: cover
+  &-container
+    padding-top: 120px
+    @extend %display-flex_column-align-center
+  &__title
+    font:
+      size: 30px
+      weight: 700
+    line-height: 36px
+    max-width: 350px
+    text-align: center
+  &__btn
+    margin-top: 35px
+    @extend  %project-btn
+    &:hover
+      @extend %project-btn-hover
+    &:active
+      @extend %project-btn-active

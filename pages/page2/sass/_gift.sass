@@ -1,0 +1,157 @@
+.gift
+  background: linear-gradient(to right, rgba(237,240,245,1) 0%,rgba(237,240,245,1) 80%,rgba(249,251,255,1) 80%,rgba(249,251,255,1) 100%)
+  &-cotainer
+    padding-top: 86px
+    padding-bottom: 86px
+    @extend %displey-flex-column-center
+
+.gift__content
+  margin-top: 68px
+  max-width: 882px
+  display: flex
+  &__img
+    width: 462px
+    height: 415px
+    transform: translateX(-50%)
+    &__image
+      width: 100%
+      height: auto
+
+.gift-inner
+  padding: 61px 0
+  display: flex
+  background-color: #fff
+  border: 1px solid #EDF0F5
+
+.gift__content__text-wrapper
+  display: flex
+  width: 430px
+  flex-direction: column
+  background-color:  #fff
+  transform: translateX(-35%)
+  &__price
+    @extend %priceProduct
+    color: $accent-color
+  &__title
+    @extend %title
+    color:#232C38
+    margin-top: 12px
+  &__text
+    @extend %discription-2
+    color: $dark-gray
+    margin-top: 12px
+  &__list
+    margin-top: 30px
+    display: flex
+    justify-content: space-between    
+    &__item
+      display: flex
+      align-items: center
+      &__text-1
+        @extend %discription-2
+        color: $primary-color
+      &__text-2
+        @extend %discription-2
+        font-weight: 600
+        color: $primary-color
+      &::before
+        display: inline-block
+        width: 40px
+        height: 40px
+        content: ""
+        background: 50% 50% no-repeat
+        margin-right: 12px
+    
+.gift__content__text-wrapper__buttons
+  margin-top: 50px
+  display: flex
+  justify-content: space-between
+  &__btn
+    @extend %button
+    &:hover
+      @extend %buttonHover
+
+.gift__content__tabs
+  display: flex
+  flex-direction: column
+  width: 88px
+  &__item
+    padding: 60px 30px    
+    @extend %displayMedium
+    color: rgba(65, 81, 103, 0.3)
+    text-align: center
+    background-color: #F5F8FC
+    border-top: 1px solid #F5F8FC
+    cursor: pointer
+    &:focus
+      @extend %tabHover
+      outline: none
+    &:hover
+      @extend %tabHover
+    
+
+@each $gift-item in coffee-beans, mountain
+  .ic-#{$gift-item}::before
+    background-image: url(../img/ic-#{$gift-item}.svg)
+
++media-screen(1080px)
+  .gift__content__img
+    width: 350px
+    height: 280px
+    transform: translateX(-20%)
+  .gift__content__text-wrapper
+    transform: translateX(-10%)
+
++media-screen(980px)
+  .gift__content__img
+    width: 310px
+    height: 250px
+    transform: translateX(-20%)
+  .gift__content__text-wrapper
+    transform: translateX(-7%)
+
++media-screen(980px)
+  .gift__content__img
+    width: 290px
+    height: 230px
+    transform: translateX(-3%)
+  .gift__content__text-wrapper
+    transform: translateX(-4%)
+
++media-screen(840px)
+  .gift__content
+    flex-direction: column-reverse
+    width: 100%
+  .gift-inner
+    padding: 61px 20px
+    flex-direction: column
+  .gift__content__img
+    transform: translateX(0)
+  .gift__content__text-wrapper
+    margin-top: 25px
+    transform: none
+    max-width: 740px
+  .gift__content__tabs
+    flex-direction: row
+    &__item
+      padding: 25px 70px
+
++media-screen(510px)
+  .gift__content__tabs
+    width: 100%
+    &__item
+      padding: 25px 0
+      width: 120px
+  .gift__content__text-wrapper
+    width: 100%
+
++media-screen(440px)
+  .gift__content__text-wrapper__list
+    flex-direction: column
+    &__item:first-child
+      margin-bottom: 20px
+
++media-screen(370px)
+  .gift__content__img
+    width: 225px
+    height: 180px

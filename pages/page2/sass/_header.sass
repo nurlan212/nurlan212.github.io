@@ -1,0 +1,63 @@
+.header-container
+  position: relative
+  padding: 0 21px
+  display: grid
+  grid-template-columns: 288px auto
+
+.header__cover 
+  position: absolute
+  left: 0
+  top: 0
+  display: none
+  width: 100%
+  height: 100%
+  background: url(../img/table.jpg) 50% 50% no-repeat
+  opacity: 0.3
+.header__content
+  padding: 75px 0 64px 43px
+  position: relative
+  &__text-wrapper
+    margin-top: 377px
+    width: 470px
+    color: #415167
+    z-index: 100
+    &__text
+      @extend %displayLarge
+      text-transform: uppercase
+      &_2
+        display: inline-block
+        padding: 0 15px
+        background-color: #C7A17A
+        color: $bg-color
+        transform: translateX(-15px)
+
+.header__promo
+  background: url(../img/table.jpg) 50% 50% no-repeat
+
++media-screen(768px)
+  .header-container
+    display: block
+  .header__cover 
+    display: block
+    z-index: 200
+  .header__promo
+    display: none
+  .header__content
+    padding-left: 15px
+    z-index: 250
+  .header__content__text-wrapper
+    width: auto
+    margin-top: 176px
+    &__text
+      font-size: 43px
+
++media-screen(480px)
+  .header__content__text-wrapper__text
+    font-size: 35px
+
++media-screen(365px)
+  .header__content__text-wrapper
+    width: auto
+    margin-top: 160px
+    &__text
+      font-size: 27px

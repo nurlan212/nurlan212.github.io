@@ -1,0 +1,10 @@
+- let images = ['img-1.jpg', 'img-2.jpg', 'img-3.jpg', 'img-4.jpg', 'img-5.jpg', 'img-6.jpg', 'img-2.jpg', 'img-4.jpg'];
+
+.promo
+  .container.promo-container
+    h4.promo__title More ideas and inspiration
+    .promo__content
+      each img in images
+        .promo__content__img-wrapper
+          img.promo__content__img-wrapper__image(src=`uploads/${img}`, alt="")
+    a.promo__link(href="#") Read more

@@ -1,0 +1,66 @@
+.footer
+  background-color: #141A20
+  &-container
+    padding-top: 42px
+    padding-bottom: 42px
+    font-size: 11px
+    color: #fff
+    @extend %display-flex_space-between      
+  &__company
+    max-width: 250px
+    &__logo
+      display: block
+      margin: 19px 0 4px 0
+  &__text
+    line-height: 19px
+    letter-spacing: 1px     
+  &__contact
+    max-width: 141px
+
+.footer-title
+  text-transform: uppercase
+
+.footer-list
+  margin-top: 20px
+
+.footer-list-item
+  font-weight: 600
+  text-transform: uppercase
+  margin-bottom: 10px
+
+.footer-list-item a
+  color: inherit
+  &:hover
+    color: $project-btn-color
+
+.footer__social
+  display: flex
+  &__item
+    display: inline-block
+    content: ""
+    width: 12px
+    height: 12px
+    background: 50% 50% no-repeat
+    background-size: cover
+    margin-right: 24px
+    &:last-child
+      margin-right: 0
+
+@each $social in facebook, twitter, google
+  .ic-#{$social}
+    background-image: url(../img/ic-#{$social}.svg)
+
++media-screen(768px)
+  .footer-container
+    flex-direction: column
+  .footer-item
+    margin-bottom: 15px
+    &:last-child
+      margin-bottom: 0
+  .footer__social__item
+    width: 25px
+    height: 25px
+
+
+
+  

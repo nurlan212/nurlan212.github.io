@@ -1,0 +1,13 @@
+- let menuItems = ['TRANG CHỦ', 'COFFEE', 'PHIN MẠ MÀU', 'COMBO PHIN PHÊ', 'GIFTSET', 'LIÊN HỆ'];
+.menu
+  include ./_menu__close__btn.pug
+  a.menu__basket(href="#")
+    .menu__basket__count
+      p.menu__basket__count__content 2
+  ul.menu__list
+    - for (let i = 0; i < menuItems.length; i++)
+      - if(i === 0)
+        li.menu__list__title= menuItems[i]
+      - else
+        li.menu__list__item
+          a.menu__list__item__link(href="#")= menuItems[i]

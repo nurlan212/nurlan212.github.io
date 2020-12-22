@@ -1,0 +1,35 @@
+.header__menu-burger 
+  display: none
+  flex-direction: column
+  width: 44px
+  height: 30px
+  &__line
+    display: inline-block
+    height: 4px
+    border-radius: 5px
+    background: #fff
+    margin-bottom: 9px
+    &:last-child
+      margin-bottom: 0 
+  +media-screen(768px)
+    display: flex  
+
+.header-vertical-menu-wrapper
+  display: none
+  width: 100%
+
+.header__vertical-menu
+  margin-top: 5px
+  display: flex
+  flex-direction: column
+  background-color: $footer-bg-color
+  padding: 10px 0
+  &__item
+    padding: 15px
+    font-size: 15px
+    font-weight: 600
+    color: #fff
+    &:last-child
+      margin-bottom: 0
+    &:hover
+      background-color: $accent-color  
