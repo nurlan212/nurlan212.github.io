@@ -3,291 +3,323 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="fonts/montserrat/stylesheet.css">
   <link rel="stylesheet" href="css/styles.css">
-  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
-  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script src="js/jQuery3.5.1.js"></script>
   <script src="js/scripts.js"></script>
-  <title>Document</title>
+  <title>MOVEE</title>
 </head>
 <body>
-  <header class="header" id = "header-id"></header>
-  <div class="promo-video" id = "promo-video-id"></div>
-  <div class="features" id = "features-id"></div>
-  <div class="content" id = "content-id"></div>
-  <div class="promo" id = "promo-id"></div>
-  <div class="contact" id = "contact-id"></div>
-  <div class="footer" id = "footer-id"></div>
-
-
-  <script type="text/babel">
-
-    const ProjectLogo = ({logoClass, logoImg, logoImgClass}) => {
-      return (
-        <a href="#" className={logoClass}>
-          <img src={`img/${logoImg}`} alt="logo" className={logoImgClass}/>
-        </a>
-      );
-    };
-
-    const ProjectListItem = ({listItemText, listItemClass }) => {
-      return <a href="#" className = {listItemClass}>{listItemText}</a>
-    };
-
-    const HeaderMenu = () => {
-      return (
-        <div className = "header__inner1__menu">
-          <ProjectListItem listItemText = "Features" listItemClass = "header__inner1__menu__item" />
-          <ProjectListItem listItemText = "Pricing" listItemClass = "header__inner1__menu__item" />
-          <ProjectListItem listItemText = "Community" listItemClass = "header__inner1__menu__item" />
-          <ProjectListItem listItemText = "Support" listItemClass = "header__inner1__menu__item" />
-        </div>
-      );
-    };
-
-    const HeaderInner1 = () => {
-      return (
-        <div className = "header__inner1">
-          <ProjectLogo logoClass = "header__inner1__logo-link" logoImg = "logo.svg"  logoImgClass = "header__inner1__logo-link__img"/>
-          <HeaderMenu />
-        </div>
-      );
-    }
-    //header-inner1 end
-
-    //header-inner2
-    const ProjectButton = ({buttonText, buttonClass}) => {
-      return <a href="#" className = {buttonClass}>{buttonText}</a>;
-    };
-
-    const HeaderInner2 = () => {
-      return (
-        <div className = "header__inner2">
-          <ProjectButton buttonText = "Log in" buttonClass = "header__inner2__btn" />
-          <ProjectButton buttonText = "Register" buttonClass = "header__inner2__btn" />
-        </div>
-      )
-    };
-    //header-inner2 end
-
-    //Вставляем  две внутренних блоков header в React.Fragment  
-    const HeaderContainer = () => {
-      return (
-        <div className = "container header-container">
-          <HeaderInner1 />
-          <HeaderInner2 />
-        </div>
-      );
-    };
-
-    ReactDOM.render(<HeaderContainer />, document.getElementById('header-id'));
-
-    //promo-video
-    const Video = () => {
-      return (
-        <div className = "promo-video__clip-wrapper">
-          <video src="video/LOST_IN_KAZAKHSTAN_4K.mp4" className = "promo-video__clip" id = "video-clip"></video>  
-        </div>
-      );
-    };
-
-    const PromoVideoContent = () => {
-      return (
-        <div className = "promo-video__content">
-          <a href="#" className="promo-video__content__link-btn-play" id = "play-btn"></a>
-          <h5 className="promo-video__content__title">The largest community of photo enthusiasts</h5>
-          <a href="#" className="promo-video__content__btn">Join Today</a>
-        </div>
-      );
-    };
-
-    const PromoVideoBlockContent = () => {
-      return (
-        <React.Fragment>
-          <Video />
-          <PromoVideoContent />
-        </React.Fragment>
-      );
-    };
-
-    ReactDOM.render(<PromoVideoBlockContent />, document.getElementById('promo-video-id'));
-
-    //features
-    const FeatureslistItem = ({title, text}) => {
-      return (
-        <li className="features__list__item">
-          <h6 className="features__list__item__title">{title}</h6>
-          <p className="features__list__item__text">{text}</p>
-          <a href="#" className="features__list__item__btn">Learn more</a>
+  <header class="header">
+   <div class="container header-container">
+     <div class="header-container-inner-wrapper">
+      <a href="" class="header__logo-link"><img src="img/logo.svg" alt="logo"></a>
+      <div class="header__menu">
+        <a href="" class="header__menu__item-link">Цены</a>
+        <a href="" class="header__menu__item-link">Автопарк</a>
+        <a href="" class="header__menu__item-link">Отзывы</a>
+        <a href="" class="header__menu__item-link">Контакты</a>
+      </div>
+      <div class="header__menu-burger" id="burger">
+        <span class="header__menu-burger__line"></span>
+        <span class="header__menu-burger__line"></span>
+        <span class="header__menu-burger__line"></span>
+      </div>
+      <a href="tel:8(800)-080-12-13" class="header__tel">8(800)-080-12-13</a>
+     </div>    
+    <div class="header-vertical-menu-wrapper">
+      <div class="header__vertical-menu" id="vertical-menu">
+        <a href="#" class="header__vertical-menu__item">Цены</a>
+        <a href="#" class="header__vertical-menu__item">Автопарк</a>
+        <a href="#" class="header__vertical-menu__item">Отзывы</a>
+        <a href="#" class="header__vertical-menu__item">Контакты</a>
+        <a href="tel:8(800)-080-12-13" class="header__vertical-menu__item">8(800)-080-12-13</a>
+      </div>
+    </div>
+   </div>
+   
+  </header>
+  <div class="promo">
+    <div class="container promo-container">
+      <div class="promo__content">
+        <h3 class="promo__content__title">Квартирные переезды</h3>
+        <p class="promo__content__text">По Москве и области</p>
+      </div>      
+      <a href="#" class="promo__btn project-btn project_btn-1">Заказать</a>
+      <ul class="promo__list">
+        <li class="promo__list__item promo__list__item_transport"><p>Более 800 переездов</p></li>
+        <li class="promo__list__item promo__list__item_package"><p>Бережная упаковка</p></li>
+        <li class="promo__list__item promo__list__item_money"><p>Фиксированная цена</p></li>
+      </ul>
+    </div>
+  </div>
+  <div class="description">
+    <div class="container description-container block">
+      <h4 class="description__title block-title">Как это происходит?</h4>
+      <ol class="description__list">
+        <li class="description__list__item">
+          <div class="description__list__item__inner-wrap">
+            <h6 class="description__list__item-title">Оценка объема предстоящих работ</h6>
+            <p class="description__list__item-text">
+              Стоимость переезда зависит от количества комнат, вещей и мебели.
+            </p>
+          </div>          
         </li>
-      );
-    };
-
-    const FeaturesList = () => {
-      return (
-        <ul className = "features__list">
-          <FeatureslistItem 
-          title = "Sed ut perspiciatis" 
-          text = "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur   magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est." />
-          <FeatureslistItem 
-          title = "Lorem ipsum dolor" 
-          text = "Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna   aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi." />
-          <FeatureslistItem 
-          title = "Nemo enim ipsam" 
-          text = "Consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,   qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam." />
-          <FeatureslistItem 
-          title = "Tempor incididunt" 
-          text = "Eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor   sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora." />
-        </ul>
-      );
-    };
-
-    const FeaturesContainer = () => {
-      return (
-        <div className = "container features-container">
-          <h3 className="features__title">Snap photos and share like never before</h3>
-          <FeaturesList />
-        </div>
-      );
-    };
-
-    ReactDOM.render(<FeaturesContainer />, document.getElementById('features-id'));
-
-    // content
-    const ContentText = ({title, text, extraClass}) => {
-      return (
-        <div className={`content__item__text-wrapper ${extraClass}`}>
-          <h5 className="content__item__text-wrapper__title">{title}</h5>
-          <p className="content__item__text-wrapper__text">{text}</p>
-        </div>
-      );
-    };    
-
-    const ImageBlock = ({imageBlockClass, img}) => {
-      return (
-        <div className = {imageBlockClass}>
-          <img src={`uploads/${img}`} alt="" className = {`${imageBlockClass}__img`} />  
-        </div>
-      );
-    };
-
-    const Content1 = () => {
-      return (
-        <div className = "content1">
-          <div className = "container content-container">
-            <ImageBlock img = "image1.png" imageBlockClass = "content__item__img-wrapper"/>
-            <ContentText title = "Sed ut perspiciatis unde omnis"
-            text = "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem." 
-            extraClass = "content__item__text-wrapper_1" />
+        <li class="description__list__item">
+          <div class="description__list__item__inner-wrap">
+            <h6 class="description__list__item-title">Упаковка вещей</h6>
+            <p class="description__list__item-text">
+              Упаковываем вещи в коробки, подписываем. Габаритное и деликатное,  упаковываем отдельно. 
+            </p>
+          </div>          
+        </li>
+        <li class="description__list__item">
+          <div class="description__list__item__inner-wrap">
+            <h6 class="description__list__item-title">Погрузка и транспортировка вещей</h6>
+            <p class="description__list__item-text">
+              В нашем автопарке имеются машины, подходящие для мебели любых габаритов.
+            </p>
+          </div>          
+        </li>        
+        <li class="description__list__item">
+          <div class="description__list__item__inner-wrap">
+            <h6 class="description__list__item-title">Распаковка и расстановка мебели</h6>
+            <p class="description__list__item-text">
+              Опытные грузчики быстро расставят мебель и уберут мусор от распаковки.
+            </p>
+          </div>          
+        </li>
+      </ol>
+    </div>
+  </div>
+  <div class="price">
+    <div class="container price-container block">
+      <h4 class="price__title block-title">Цены</h4>
+      <h6 class="price__title-small block-title-small">Фиксированная стоимость на переезд под ключ</h6>
+      <ul class="price__list">
+        <li class="price__list__item">
+          <div class="price__list__item__inner-wrap">
+            <div class="price__list__item__header">
+              <h6 class="price__list__item__header__title block-title-small">1-комнатная кв-ра</h6>
+              <ul class="price__list__item__header__list">
+                <li class="price__list__item__header__list__item">1 фургон</li>
+                <li class="price__list__item__header__list__item">2 грузчика</li>
+                <li class="price__list__item__header__list__item">Переезд за 4 часа</li>
+              </ul>
+            </div>
+            <div class="price__list__item__footer">
+              <p class="price__list__item__footer__text">8 490₽ </p>
+              <a href="#" class="price__list__item__footer__btn project-btn project_btn-2">Заказать</a>
+            </div>
+          </div>          
+        </li>
+        <li class="price__list__item">
+          <div class="price__list__item__inner-wrap">
+            <div class="price__list__item__header">
+              <h6 class="price__list__item__header__title block-title-small">2-комнатная кв-ра  </h6>
+              <ul class="price__list__item__header__list">
+                <li class="price__list__item__header__list__item">1 газель - 3 метра</li>
+                <li class="price__list__item__header__list__item">2 грузчика</li>
+                <li class="price__list__item__header__list__item">Переезд за 4 часа</li>
+              </ul>
+            </div>
+            <div class="price__list__item__footer">
+              <p class="price__list__item__footer__text">10 990₽</p>
+              <a href="#" class="price__list__item__footer__btn project-btn project_btn-2">Заказать</a>
+            </div>
           </div>
-        </div>
-      );
-    };
-
-    const Content2 = () => {
-      return (
-        <div className = "content2">
-          <div className = "container content-container">
-            <ContentText title = "Sed ut perspiciatis unde omnis"
-            text = "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem."
-            extraClass = "content__item__text-wrapper_2" />
-            <ImageBlock img = "image2.jpg" imageBlockClass = "content__item__img-wrapper"/>
+          
+        </li>
+        <li class="price__list__item">
+          <div class="price__list__item__inner-wrap">
+            <div class="price__list__item__header">
+              <h6 class="price__list__item__header__title block-title-small">3-комнатная кв-ра</h6>
+              <ul class="price__list__item__header__list">
+                <li class="price__list__item__header__list__item">1 газель - 4 метра</li>
+                <li class="price__list__item__header__list__item">2 грузчика</li>
+                <li class="price__list__item__header__list__item">Переезд за 6 часов</li>
+              </ul>
+            </div>
+            <div class="price__list__item__footer">
+              <p class="price__list__item__footer__text">16 490₽ </p>
+              <a href="#" class="price__list__item__footer__btn project-btn project_btn-2">Заказать</a>
+            </div>
           </div>
-        </div>        
-      );
-    };
-
-    const ContentReactFragment = () => {
-      return (
-        <React.Fragment>
-          <Content1 />
-          <Content2 />
-        </React.Fragment>
-      );
-    };
-
-    ReactDOM.render(<ContentReactFragment />, document.getElementById('content-id'));
-
-    //promo
-    const PromoContainer = () => {
-      return (
-        <div className = "container promo-container">
-          <h5 className="promo__title">You’re in good company</h5>
-          <p className="promo__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
-          <div className = "promo__images">
-            <ImageBlock img = "image3.jpg" imageBlockClass = "promo__images__wrapper"/>
-            <ImageBlock img = "image3.jpg" imageBlockClass = "promo__images__wrapper"/>
-            <ImageBlock img = "image3.jpg" imageBlockClass = "promo__images__wrapper"/>
-            <ImageBlock img = "image3.jpg" imageBlockClass = "promo__images__wrapper"/>
-            <ImageBlock img = "image3.jpg" imageBlockClass = "promo__images__wrapper"/>
-            <ImageBlock img = "image3.jpg" imageBlockClass = "promo__images__wrapper"/>
-            <ImageBlock img = "image3.jpg" imageBlockClass = "promo__images__wrapper"/>
-            <ImageBlock img = "image3.jpg" imageBlockClass = "promo__images__wrapper"/>    
-          </div>
+          
+        </li>
+      </ul>
+      <a href="#" class="price__all-prices-link">Все цены</a>
+      
+        
+    </div>
+  </div>
+  <div class="carpark">
+    <div class="container carpark-container block">
+      <h4 class="carpark__title block-title">Автопарк</h4>
+      <h6 class="carpark__title-small block-title-small">10 видов автомобилей от 800 кг до 10 тонн</h6>
+      <div class="carpark__tabs-wrapper">
+        <a href="" class="carpark__tabs-item" id="transport1">Газели</a>
+        <a href="" class="carpark__tabs-item" id="transport2">Каблуки</a>
+        <a href="" class="carpark__tabs-item" id="transport3">Грузовики</a>
+      </div>
+      <div class="carpark__content-wrapper">
+        <div class="carpark__content-1">
+          <h6 class="carpark__content__title-hidden"></h6>
+          <h6 class="carpark__content__title"></h6>
+          <ul class="carpark__content__list">
+          </ul>
+          <a href="" class="carpark__content__btn project-btn project_btn-2">Заказать</a>
         </div>
-      );
-    };
-
-    ReactDOM.render(<PromoContainer />, document.getElementById('promo-id'));
-
-    //contact
-    const ContactContainer = () => {
-      return (
-        <div className = "container contact-container">
-          <p className="contact__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+        <div class="carpark__content-2">
+          <img src="" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="review">
+    <div class="container review-container block">
+      <h4 class="review__title block-title">Отзывы</h4>
+      <ul class="review__list">
+        <li class="review__list__item">
+          <div class="review__list__item__header">
+            <h6 class="review__list__item__header__title">Ирина</h6>
+            <p class="review__list__item__header__text">24.03.2019 
+              <span class="review__list__item__header__text__span star-colored"></span>
+              <span class="review__list__item__header__text__span star-colored"></span>
+              <span class="review__list__item__header__text__span star-colored"></span>
+              <span class="review__list__item__header__text__span star-colored"></span>
+              <span class="review__list__item__header__text__span star-colored"></span>
+            </p>
+          </div>
+          <p class="review__list__item__text">
+            Обращение к вам за помощью в переезде оставило только положительные впечатления. Хотелось отметить замечательного водителя газели Алексея. Были трудности с заездом во двор, он проявил себя как компетентный и профессиональный сотрудник, за что ему огромное...
           </p>
-          <div className = "contact__buttons">
-            <ProjectButton buttonText = "Join Today" buttonClass = "contact__buttons__btn" />
-            <ProjectButton buttonText = "Contact us" buttonClass = "contact__buttons__btn" />
+          <a href="" class="review__list__item__link">Читать полностью </a>
+        </li>
+        <li class="review__list__item">
+          <div class="review__list__item__header">
+            <h6 class="review__list__item__header__title">Светлана Васильевна</h6>
+            <p class="review__list__item__header__text">13.09.2019 
+              <span class="review__list__item__header__text__span star-colored"></span>
+              <span class="review__list__item__header__text__span star-colored"></span>
+              <span class="review__list__item__header__text__span star-colored"></span>
+              <span class="review__list__item__header__text__span star-colored"></span>
+              <span class="review__list__item__header__text__span"></span>
+            </p>
           </div>
-        </div>
-      );
-    };
-
-    ReactDOM.render(<ContactContainer />, document.getElementById('contact-id'));
-
-    //footer
-    const FooterMenu = ({text1, text2, text3}) => {
-      return (
-        <div className = "footer__header__menu">
-          <ProjectListItem listItemText = {text1} listItemClass = "footer__header__menu__item" />
-          <ProjectListItem listItemText = {text2} listItemClass = "footer__header__menu__item" />  
-          <ProjectListItem listItemText = {text3} listItemClass = "footer__header__menu__item" />  
-        </div>
-      );
-    };
-
-    const FooterHeader = () => {
-      return (
-        <div className = "footer__header">
-          <FooterMenu text1 = "Mobile app" text2 = "Community" text3 = "Company" />
-          <ProjectLogo logoClass = "footer__header__logo" logoImg = "logo.svg" />
-          <FooterMenu text1 = "Help desk" text2 = "Blog" text3 = "Resources" />
-        </div>
-      );
-    };
-
-    const FooterContainer = () => {
-      return (
-        <div className = "container footer-container">
-          <FooterHeader />
-          <div className="footer__social">
-            <a href="#" className="footer__social__link ic-facebook"></a>
-            <a href="#" className="footer__social__link ic-twitter"></a>
-            <a href="#" className="footer__social__link ic-youtube"></a>
-            <a href="#" className="footer__social__link ic-linkedin"></a>
+          <p class="review__list__item__text">
+            Сегодня ( 13.09.2019 ) мы переехали. Остались очень довольны, несмотря на то, что к нам опоздали на 1,5 часа. Морально были к этому готовы ( в прошлый переезд в другой фирме тоже опоздали на час).  Водитель заранее позвонил, предупредил, что задерживается. Когда....
+          </p>
+          <a href="" class="review__list__item__link">Читать полностью </a>
+        </li>
+        <li class="review__list__item">
+          <div class="review__list__item__header">
+            <h6 class="review__list__item__header__title">Ольга Петрова</h6>
+            <p class="review__list__item__header__text">11.11.2019 
+              <span class="review__list__item__header__text__span star-colored"></span>
+              <span class="review__list__item__header__text__span star-colored"></span>
+              <span class="review__list__item__header__text__span"></span>
+              <span class="review__list__item__header__text__span"></span>
+              <span class="review__list__item__header__text__span"></span>
+            </p>
           </div>
-          <p className="footer__text">© Photo, Inc. 2019. We love our users!</p>
-        </div>
-      );
-    };
-
-    ReactDOM.render(<FooterContainer />, document.getElementById('footer-id'));
+          <p class="review__list__item__text">
+            Могу на 100% порекомендовать компанию MOVEE и отметить, что цены фиксированы, что упрощает расчет. Безо всяких заморочек, в отличии от их конкурентов. Упаковали все качественно и быстро. Все вещи приехали в сохранности. Особлая благодарность Александру за его...
+          </p>
+          <a href="" class="review__list__item__link">Читать полностью </a>
+        </li>
+      </ul>
+      <a href="#" class="review__btn project-btn">Все отзывы</a>
+    </div>
+  </div>
+  <div class="booking">
+    <form>
+      <div class="container booking-container block">        
+        <div class="form-inner">
+          <h4 class="booking__title block-title">Закажи  переезд прямо сейчас</h4>
+          <p class="booking__text">Мы перезвоним в течении 10 секунд</p>
+          <div class="booking__input-wrapper">
+            <input type="text" id="" class="booking__input-name booking__input" placeholder="Ваше имя">
+            <input type="tel" id="" class="booking__input-tel booking__input" placeholder="Телефон">
+            <input type="submit" value="Перезвонить мне" class="booking__input-btn">
+          </div>        
+          <div class="booking__agree">
+            <input type="checkbox" name="" id="agree" class="booking__agree__input-checkbox">
+            <label for="agree" class="booking__agree__label">Даю согласие на обработку данных</label>
+          </div>
+        </div>       
+      </div>
+    </form>
     
-  </script>
+  </div>
+  <div class="map">
+    <div class="map-wrapper">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8217.746347702092!2d76.81122793752542!3d43.26374198415602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x388341fb1e936dd1%3A0x8326b3b685aac98c!2z0JDQu9C80LDRgtGLINCQ0YDQtdC90LA!5e0!3m2!1sru!2skz!4v1606575567902!5m2!1sru!2skz" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+    <div class="map__modal">
+      <a href="#" class="map__modal__logo-link"><img src="img/logo.svg" alt="logo"></a>
+      <ul class="map__modal__contact-list">
+          <li class="map__modal__contact-list__item">Москва, Волгоградский пр-т, 38</li>
+          <li class="map__modal__contact-list__item"><a href="tel:8(800)-080-12-13" class="modal-tel-link modal-link">8 (800)-080-12-13</a></li>
+          <li class="map__modal__contact-list__item">
+            <a href="mailto:hello@movee.ru" class="map__modal__contact-list__item__link modal-link">hello@movee.ru</a>
+          </li>
+      </ul>
+      <ul class="map__modal__social-list">
+          <li class="map__modal__social-list__item"><a href="#" class="social-link ic-youtube"></a></li>
+          <li class="map__modal__social-list__item"><a href="#" class="social-link ic-vk"></a></li>
+          <li class="map__modal__social-list__item"><a href="#" class="social-link ic-fb"></a></li>
+          <li class="map__modal__social-list__item"><a href="#" class="social-link ic-insta"></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="price-modal">
+    <div class="price-modal-inner">
+      <form action="#">
+        <div class="price-modal-content">
+          <input type="text" class="price-modal__name price-modal-item" placeholder="Имя">
+          <input type="tel" class="price-modal__phone price-modal-item" placeholder="Телефон">
+          <select id="" class="price-modal-item">
+            <option value="1">1-комнатная кв-ра</option>
+            <option value="2">2-комнатная кв-ра</option>
+            <option value="3">3-комнатная кв-ра</option>
+          </select>
+          <button class="price-modal__btn">Отправить</button>
+        </div>
+      </form>
+    </div>            
+  </div>
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer__content-1 footer-item">
+        <a href="#" class="footer__content-1__logo-link">
+          <img src="img/logo.svg" alt="logo">
+        </a>
+        <a href="#" class="footer__content-1__link-2">Политика конфиденциальнности</a>
+        <a href="#" class="footer__content-1__link-3">Соглашение на обработку персональных данных</a>
+      </div>
+      <ul class="footer__content-2 footer-item">
+        <li class="footer__content-2__item"><a href="#" class="footer__content-2__item__link">Главная</a></li>
+        <li class="footer__content-2__item"><a href="#" class="footer__content-2__item__link">Цена</a></li>
+        <li class="footer__content-2__item"><a href="#" class="footer__content-2__item__link">Автопарк</a></li>
+        <li class="footer__content-2__item"><a href="#" class="footer__content-2__item__link">Отзывы</a></li>
+        <li class="footer__content-2__item"><a href="#" class="footer__content-2__item__link">Контакты</a></li>
+      </ul>
+      <div class="footer__content-3 footer-item">
+        <ul class="footer__content-3__social-list">
+          <li class="footer__content-3__social-list__item"><a href="#" class="social-link ic-youtube"></a></li>
+          <li class="footer__content-3__social-list__item"><a href="#" class="social-link ic-vk"></a></li>
+          <li class="footer__content-3__social-list__item"><a href="#" class="social-link ic-fb"></a></li>
+          <li class="footer__content-3__social-list__item"><a href="#" class="social-link ic-insta"></a></li>
+        </ul>
+        <a href="mailto:hello@movee.ru" class="footer__content-3__mail-link">hello@movee.ru</a>
+      </div>
+      <div class="footer__content-4 footer-item">
+        <a href="#" class="footer__content-4__btn">Обратный звонок</a>
+        <a href="tel:8(800)-080-12-13" class="footer__content-t__text">8 (800)-080-12-13</p>
+      </div>
+    </div>
+  </footer>
   
 </body>
 </html>
