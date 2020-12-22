@@ -1,0 +1,30 @@
+.header-container
+  padding-top: 14px
+  padding-bottom: 14px
+  display: flex
+  justify-content: space-between
+  font-size: 15px
+  font-weight: 500
+
+.header__inner1
+  display: flex
+  align-items: center
+  &__menu
+    margin-left: 70px
+    display: flex
+    &__item
+      color: $accent-color
+      margin-right: 40px
+      &:last-child
+        margin-right: 0
+      &:hover
+        color: darken($accent-color, 20%)        
+
+.header__inner2
+  display: flex
+  &__btn
+    @extend %small-button-style
+    &:last-child
+      margin-left: 12px
+    &:hover
+      @extend %small-button-hover

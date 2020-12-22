@@ -1,0 +1,66 @@
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+
+a 
+  text-decoration: none
+
+ul
+  list-style: none
+
+%button-style
+  display: flex
+  justify-content: center
+  align-items: center  
+  font-weight: 500  
+  border: 1px solid $accent-color
+  border-radius: 6px
+
+%small-button-style  
+  @extend %button-style
+  width: 130px
+  height: 40px
+  font-size: 15px  
+  color: $accent-color
+  background-color: #fff  
+
+%small-button-hover
+  background-color: $accent-color
+  color: #fff
+
+%big-button-style
+  @extend %button-style
+  width: 192px
+  height: 52px
+  font-size: 17px  
+  color: #fff
+  background-color: $accent-color
+
+%big-button-hover
+  background-color: darken($accent-color, 15%)
+
+%title-style
+  font-size: 48px
+  line-height: 72px
+  letter-spacing: -0.015em
+  color: #000000
+
+%subtitle-style
+  font-size: 36px
+  line-height: 50px
+  letter-spacing: -0.015em
+  color: rgba(0, 0, 0, 0.8)
+
+%content-title
+  font-weight: 700
+  font-size: 24px
+  line-height: 36px
+  letter-spacing: -0.015em
+  color: #000000
+
+%content-text
+  font-size: 18px
+  line-height: 30px
+  letter-spacing: -0.015em
+  color: rgba(0, 0, 0, 0.8)

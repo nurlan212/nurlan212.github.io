@@ -1,0 +1,27 @@
+.features-container
+  padding-top: 120px
+  padding-bottom: 120px
+
+.features__title
+  @extend %title-style
+  max-width: 750px
+
+.features__list
+  margin-top: 64px
+  display: grid
+  grid-template-columns: repeat(2, 47%)
+  column-gap: 6%
+  row-gap: 60px
+  &__item
+    display: flex
+    flex-direction: column
+    &__title
+      @extend %content-title
+    &__text
+      @extend %content-text
+      margin-top: 24px
+    &__btn
+      @extend %small-button-style
+      margin-top: 32px
+      &:hover
+        @extend %small-button-hover

@@ -1,0 +1,20 @@
+.contact
+  background: $bg-color2
+  &-container
+    padding-top: 120px
+    padding-bottom: 120px
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__text
+    @extend  %subtitle-style
+    max-width: 943px
+  &__buttons
+    display: flex
+    align-items: center
+    &__btn
+      @extend %small-button-style
+      &:last-child
+        margin-left: 45px
+      &:hover
+        @extend %small-button-hover

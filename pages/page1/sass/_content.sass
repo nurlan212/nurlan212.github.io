@@ -1,0 +1,30 @@
+.content2
+  background: $bg-color2
+.content
+  display: flex
+  flex-direction: column
+  &-container
+    padding-top: 80px
+    padding-bottom: 80px
+    display: grid
+    grid-template-columns: repeat(2, 50%)
+
+.content__item__img-wrapper
+  overflow: 
+  &__img
+    width: 100%
+    height: auto
+
+.content__item__text-wrapper
+  display: flex
+  flex-direction: column
+  justify-content: center
+  &__title
+    @extend %content-title
+  &__text
+    @extend %content-text
+    margin-top: 18px
+  &_1
+    padding-left: 80px
+  &_2
+    padding-right: 80px

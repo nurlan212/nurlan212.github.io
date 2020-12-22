@@ -1,0 +1,37 @@
+.promo-video
+  position: relative
+
+.promo-video__clip
+  width: 100%
+  height: auto
+
+.promo-video__content
+  position: absolute
+  left: 0
+  top: 50%
+  width: 100%
+  max-height: 100%
+  display: flex
+  flex-direction: column
+  align-items: center
+  &__link-btn-play
+    display: inline-block
+    width: 132px
+    height: 132px
+    border-radius: 50%
+    background: $accent-color url(../img/ic-play.svg) 55% 50% no-repeat
+    &:hover
+      background-color: darken($accent-color, 15%)
+  &__title
+    width: 100%
+    margin-top: 2.9%
+    margin-bottom: 1.1%    
+    font-size: 56px
+    line-height: 80px
+    text-align: center
+    letter-spacing: -0.015em
+    color: #000
+  &__btn
+    @extend %big-button-style
+    &:hover
+      @extend %big-button-hover
