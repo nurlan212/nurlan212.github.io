@@ -7,7 +7,7 @@
 body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-  background-color: #fff;
+  background: rgba(79,79,79,0.1);
 }
 
 ul {
@@ -30,21 +30,24 @@ a {
 }
 
 .work-list {
-  margin-top: 20px;
+  margin-top: 90px;
   display: grid;
-  grid-template-columns: repeat(4, 25%);
-  row-gap: 10px;
+  grid-template-columns: repeat(4, 150px);
+  column-gap: 30px;
+  row-gap: 30px;
+  justify-content: center;
+  justify-self: center;
+  align-self: center;
 }
 
 .work-list-item {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
-.work-list-item a {
-  font-size: 20px;
-  color: rgba(0,0,0,0.8);
-}
-
-.work-list-item a:hover {
-  text-shadow: 0 0 5px rgba(0,0,0);
+.work-list-item a img {
+  width: 100%;
+  height: auto;
 }
